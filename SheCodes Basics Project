@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vinyl 🎶</title>
+    <style>
+      body {
+        background: linear-gradient(to top, #e6b980 0%, #eacda3 100%);
+      }
+
+      .content {
+        max-width: 600px;
+        margin: 60px auto;
+        padding: 20px;
+        background: white;
+        border-radius: 20px;
+      }
+      h1 {
+        color: #b57326;
+        font-size: 36px;
+        line-height: 48px;
+        margin: 0;
+        text-align: center;
+        padding: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      h2 {
+        font-size: 18px;
+        line-height: 0px;
+        font-weight: 100;
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      img {
+        width: 50%;
+        display: block;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 10%;
+      }
+      .text {
+        font-size: 14px;
+        line-height: 20px;
+        margin: 20 0 10;
+        text-align: left;
+        padding: px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      ul {
+        list-style-type: square;
+        font-size: 14px;
+        padding: 20px;
+        text-align: left;
+        margin: -20px 10px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      button {
+        display: block;
+        margin: 20px auto;
+        border: 1px solid #5f4205;
+        color: white;
+        background: #b57326;
+        font-size: 14px;
+        line-height: 22px;
+        padding: 16px 24px;
+        border-radius: 20px;
+        transition: all 200ms ease;
+        box-shadow: rgba(99, 57, 3, 0.87) 0px 8px 8px 0;
+      }
+      button:hover {
+        background: #f1d25f;
+        color: #5f4205;
+        cursor: pointer;
+      }
+      .footer {
+        font-size: 12px;
+        color: #b57326;
+        margin: 0;
+        text-align: right;
+        padding: 0px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      .name {
+        font-size: 12px;
+        margin: 0;
+        text-align: right;
+        padding: 0px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <h1>Vinyl is the new CD!</h1>
+      <h2>So much more than a big black disc</h2>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/047/861/original/vinyl-records_istock.jpg?1665256597"
+        alt="Vinyl disc playing on record player"
+      />
+      <p class="text">
+        &ensp;Vinyl's back and, <strong>hopefully</strong>, to stay! <br />
+        &ensp;Made from
+        <a
+          href="https://en.wikipedia.org/wiki/Phonograph_cylinder"
+          target="_blank"
+        >
+          polyvinyl chloride</a
+        >
+        was massively popular in the 20th century. <br />
+        &ensp;Out of all the available music formats out there, vinyl is my
+        favourite, mainly because it reminds me of the endless hours I'd spend
+        looking at my parents' collection and also because, due to the pressing,
+        music does indeed soud different! <br />
+        &ensp;Vinyl records are very popular at the moment, you can find them
+        pretty much everywhere and in many colours and patterns! They're even
+        more fun now! Some people report that black pressed vinyls sound better
+        than coloured ones, I could agree but they're so fun and beautiful that
+        I end up ignoring it and getting the fun ones. <br />
+        &ensp;I've been collecting vinyls for the last 10 years, I don't have as
+        much as I'd like, but I'm always looking for an excuse to expand my
+        collection. And where can you buy vinyls, you ask?
+      </p>
+      <ul>
+        <li>On your local record store</li>
+        <li>
+          <a href="http://www.recordstoreday.com/" target="_blank">
+            Record Store Day Website</a
+          >
+        </li>
+        <li>
+          Your favourite band's website (<em
+            >I'm sure you'll find plenty of different versions</em
+          >)
+        </li>
+        <li>Big retailers</li>
+      </ul>
+      <p class="text">
+        If you're like me, and looking for a new excuse to get yourself a new
+        vinyl record, find out where you can find your local record store!
+      </p>
+      <button class="findOutMore">Find a record store here</button>
+      <p class="name">
+        <span class="footer">Page coded by:</span>Tatiana Pereira
+      </p>
+    </div>
+    <script>
+      function findOut() {
+        let name = prompt("What's your name?");
+        let age = prompt("How old are you?");
+        let city = prompt("Where do you live?");
+        if (age >= 18) {
+          let heading = document.querySelector("h1");
+          heading.innerHTML =
+            name + "," + " there's 23 stores near " + city + "!";
+        } else {
+          let heading = document.querySelector("h1");
+          heading.innerHTML = name + "," + " ask permission to buy first!";
+        }
+      }
+
+      let findButton = document.querySelector(".findOutMore");
+      findButton.addEventListener("click", findOut);
+    </script>
+  </body>
+</html>
